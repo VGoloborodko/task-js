@@ -203,3 +203,154 @@
 
 //___________________________________________________________________________________
 
+// //Написать функцию, которая принимает массив чисел, например [1,2,3,4,5] и функция 
+// //возращает среднее арифметическое, (округлить результат до десятых)
+
+// const arr = [5.23,4.44,7.21,5.54];
+
+// function average(array) {
+//     let sum = null;
+
+//     for(let i = 0; i < array.length; i++) {
+//         sum = sum + array[i];
+//     }
+
+//     let arithmetic = sum / arr.length
+//     console.log(arithmetic.toFixed(1))
+// }
+
+// average(arr)
+
+//___________________________________________________________________________________
+
+//Написать функцию, которая принимает массив чисел, например [1,2,3,4,5], и переносит первый элемент массива в конец 
+//(например можно засунуть первый элемент в конец, затем удалить первый элемент), попробуй несколькими способами сделать, если догадаешься
+
+//Не понял смысла
+
+//___________________________________________________________________________________
+
+// //Написать функцию, которая принимает массив сотрудников, каждый сотрудник имеет имя и возраст ([{name: 'Иван', age: 23},...]) 
+// //и возвращает массим, где каждый элемент представляет из себя строку "Имя: Иван, возвраст: 23".
+
+// const employees = [{name: 'Иван', age: 27}, {name: 'Ольга', age: 24},{name: 'Алексей', age: 23}];
+
+// function listEmployees() {
+//     employees.forEach( elem => {
+//         console.log(`Имя: ${elem.name}, возвраст: ${elem.age}`);
+//     })
+// }
+
+// listEmployees()
+
+//___________________________________________________________________________________
+
+// function funcNumber(num) {
+    // for(let i = 0; i < num.length; i++) {
+    //     if(num[i] % 2 === 0) {
+    //         console.log(num[i]);
+//         }
+//     }
+// }
+
+// funcNumber('123456789')
+
+//___________________________________________________________________________________
+
+// let size = null;
+// const kb = 8192;
+
+// size = kb * 15;
+
+// console.log(`В одном киллобайте ${kb} битов`);
+
+//___________________________________________________________________________________
+
+// //Написать код, который считает сумму всех чисел
+
+// const numbers = prompt('Введите числа');
+// const arr = numbers.split('');
+// let sum = null
+
+// function sumfunc(arrElem) {
+//     // arrElem.forEach(element => {
+//     //     sum += +element;
+//     // })
+//     for (let i = 0; i < arrElem.length; i++) {
+//         sum += +arrElem[i];
+//     }
+//     console.log(sum);
+// }
+
+// sumfunc(arr)
+
+//___________________________________________________________________________________
+
+//Напишите программу, которая просит пользователя ввести два четырёхзначных числа и выводит произведение этих чисел в консоль
+
+// const add = prompt('Введите два четырёхзначных числа через запятую', '3456,5543');
+// const array = add.split(',');
+// let sum = null;
+
+// function work(oneNum, twoNum) {
+//     sum = oneNum * twoNum;
+//     console.log(sum);
+// }
+
+// work(array[0], array[1])
+
+//___________________________________________________________________________________
+
+// const gender = prompt('Ввдеите пол "M" или "F"');
+
+// const answer = gender === 'M' ? 'Male' : 'Female';
+
+// console.log(answer);
+
+//___________________________________________________________________________________
+
+// const res = prompt('');
+
+// switch(res) {
+//     case 1:
+//         console.log('one');
+//         break;
+//     case 2:
+//         console.log('two');
+//         break;
+//     case 3:
+//         console.log('three');
+//         break;
+//     default:
+//         console.log('error');
+//         break;
+// }
+
+//___________________________________________________________________________________
+
+const req = prompt('xx xx xx', '15 11 20');
+
+const oldArr = req.split(' ');
+const arr = oldArr.map(parseFloat);
+
+function comparison(arrNum, arrStr) {
+    // console.log(arrStr)
+    if (arrStr[0].length === 2 && arrStr[1].length === 2 && arrStr[2].length === 2) {
+        if (arrNum[0] === arrNum[1] || arrNum[0] === arrNum[2] || arrNum[1] === arrNum[2]) {
+        console.error('Ошибка');
+        } else if (arrNum[0] > arrNum[1] && arrNum[0] < arrNum[2] || arrNum[0] < arrNum[1] && arrNum[0] > arrNum[2]) {
+        console.log(`Среднее число ${arrNum[0]}`);
+        } else if (arrNum[1] > arrNum[2] && arrNum[1] < arrNum[0] || arrNum[1] < arrNum[2] && arrNum[1] > arrNum[0]) {
+            console.log(`Среднее число ${arrNum[1]}`);
+        } else if (arrNum[2] > arrNum[0] && arrNum[2] < arrNum[1] || arrNum[2] < arrNum[0] && arrNum[2] > arrNum[1]) {
+            console.log(`Среднее число ${arrNum[2]}`);
+        } else {
+            console.log('Какая то проблема');
+        }
+    } else {
+        console.log('Неправильно введены числа');
+    }
+    
+}
+
+comparison(arr, oldArr)
