@@ -328,29 +328,226 @@
 
 //___________________________________________________________________________________
 
-const req = prompt('xx xx xx', '15 11 20');
+// const req = prompt('xx xx xx', '15 11 20');
 
-const oldArr = req.split(' ');
-const arr = oldArr.map(parseFloat);
+// const oldArr = req.split(' ');
+// const arr = oldArr.map(parseFloat);
 
-function comparison(arrNum, arrStr) {
-    // console.log(arrStr)
-    if (arrStr[0].length === 2 && arrStr[1].length === 2 && arrStr[2].length === 2) {
-        if (arrNum[0] === arrNum[1] || arrNum[0] === arrNum[2] || arrNum[1] === arrNum[2]) {
-        console.error('Ошибка');
-        } else if (arrNum[0] > arrNum[1] && arrNum[0] < arrNum[2] || arrNum[0] < arrNum[1] && arrNum[0] > arrNum[2]) {
-        console.log(`Среднее число ${arrNum[0]}`);
-        } else if (arrNum[1] > arrNum[2] && arrNum[1] < arrNum[0] || arrNum[1] < arrNum[2] && arrNum[1] > arrNum[0]) {
-            console.log(`Среднее число ${arrNum[1]}`);
-        } else if (arrNum[2] > arrNum[0] && arrNum[2] < arrNum[1] || arrNum[2] < arrNum[0] && arrNum[2] > arrNum[1]) {
-            console.log(`Среднее число ${arrNum[2]}`);
-        } else {
-            console.log('Какая то проблема');
-        }
-    } else {
-        console.log('Неправильно введены числа');
-    }
+// function comparison(arrNum, arrStr) {
+//     // console.log(arrStr)
+//     if (arrStr[0].length === 2 && arrStr[1].length === 2 && arrStr[2].length === 2) {
+//         if (arrNum[0] === arrNum[1] || arrNum[0] === arrNum[2] || arrNum[1] === arrNum[2]) {
+//         console.error('Ошибка');
+//         } else if (arrNum[0] > arrNum[1] && arrNum[0] < arrNum[2] || arrNum[0] < arrNum[1] && arrNum[0] > arrNum[2]) {
+//         console.log(`Среднее число ${arrNum[0]}`);
+//         } else if (arrNum[1] > arrNum[2] && arrNum[1] < arrNum[0] || arrNum[1] < arrNum[2] && arrNum[1] > arrNum[0]) {
+//             console.log(`Среднее число ${arrNum[1]}`);
+//         } else if (arrNum[2] > arrNum[0] && arrNum[2] < arrNum[1] || arrNum[2] < arrNum[0] && arrNum[2] > arrNum[1]) {
+//             console.log(`Среднее число ${arrNum[2]}`);
+//         } else {
+//             console.log('Какая то проблема');
+//         }
+//     } else {
+//         console.log('Неправильно введены числа');
+//     }
     
-}
+// }
 
-comparison(arr, oldArr)
+// comparison(arr, oldArr)
+
+//___________________________________________________________________________________
+
+// const val = +prompt('');
+// let sum = val;
+
+// while (sum < 99) {
+//     sum += 7;
+//     console.log(sum);
+// }
+
+// const val = +prompt('');
+
+// let i = 5;
+
+// while(i < 100) {
+//     i = i + 5;
+//     console.log(i);
+// }
+
+// let sum = 10;
+// let i = 0;
+
+// while(sum < 99) {
+//     sum++
+//     if(sum % 2 !== 0) {
+//         i = i + sum;
+//     }
+// }
+
+// console.log(i);
+
+
+// let br = 'Petya';
+// // const arr = br.split('').reverse().join('').toLowerCase();
+// // console.log(arr)
+// let reverse = '';
+
+// for (let i = 5 - 1; i >= 0; i--) {
+//     // console.log(br.length - 1)
+//     reverse += br[i];
+// }
+
+// console.log(reverse);
+
+
+// let text = 'Hello. World.';
+// const arr = text.split('');
+// // console.log(arr)
+
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === '.') {
+//         console.log(`Точка впервые встречается под индексом ${arr.indexOf(arr[i])}`)
+//         break;
+//     }
+// }
+
+// let text = 'Hello. World';
+
+// for (let i = 0; i < text.length; i++) {
+//     // console.log(text[i]);
+//     if (text[i] === '.') {
+//         console.log(`${text.indexOf(text[i])}`)
+//         // break;
+//     }
+// }
+
+// const str = "Hello. world.";
+
+// for(let i = 0; i < str.length; i++){
+//     console.log(`${str[i]} - ${str.indexOf(str[i])}`)
+
+// }
+
+// console.log(typeof new Array("Nnamdi", "Chidume")[Symbol.iterator]);
+
+// const alien = {
+//     name: 'Navin',
+//     tech: 'JS',
+//     laptop: {
+//         cpu: 'i7',
+//         ram: 4,
+//         brand: 'Asus'
+//     }
+// }
+
+// for (let i in alien.laptop) {
+//     console.log(i, alien.laptop[i]);
+// }
+
+//___________________________________________________________________________________
+
+//Фибоначи
+
+// // let val = prompt('Число для фибоначи');
+
+// function fibonacci(num) {
+//     let a = 1,
+//         b = 1;
+
+//     for (let i = 3; i <= num; i++) {
+//     let c = a + b;
+//         a = b;
+//         b = c;
+//     }
+//     return b;
+// }
+
+// console.log(fibonacci(10));
+
+//___________________________________________________________________________________
+
+// function logBalanceChange(dengi) {
+//     money = money + dengi;
+//     console.log('Баланс изменён');
+//     console.log(`Доступно: ${money}`);
+//   }
+
+// let money = null;
+
+// logBalanceChange(100)
+// logBalanceChange(200)
+
+//___________________________________________________________________________________
+
+// let rub = 1200;
+// let usd = 20;
+// let exchange = 75;
+
+// function moneyHuman() {
+//     console.log(`Сумма на всех счетах ${rub + (usd * exchange)}`);
+// }
+
+// moneyHuman()
+
+//___________________________________________________________________________________
+
+// function min(a, b) {
+//     return minNum = Math.min(a, b);
+    
+// }
+
+// let result = min(7, 14);
+
+
+// function isMonth(a) {
+//     if (a > 0 && a <= 12) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+
+// //   let input = prompt('Введите номер месяца:', '12');
+//   if (isMonth(13)) {
+//     console.log('Ответ записан');
+//   } else {
+//     console.log('Неверное значение');
+//   }
+  
+//___________________________________________________________________________________
+
+// const newArr = [];
+
+// function examin(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] < 0 && !Number.isInteger(arr[i])) {
+//             newArr.push(arr[i]);
+//         }
+//     }
+//     console.log(newArr);
+// }
+
+// // examin([5, 12, -1, -1.5, -9.1, 52, -40, 23, 0, -4, -5.6])
+
+//___________________________________________________________________________________
+
+// function min(a, b) {
+//     if (a < 0 || b < 0) {
+//         return null;
+//     }
+//     return Math.min(a, b);
+// }
+
+// console.log(min(7, 5));
+
+//___________________________________________________________________________________
+
+// //Вывести в консоль все отрицательные и не целые числа
+
+// function examin(arr) {
+//     return arr.filter(element => element < 0 && !Number.isInteger(element));
+// }
+
+// console.log(examin([5, 12, -1, -1.5, -9.1, 52, -40, 23, 0, -4, -5.6]));
+
+//___________________________________________________________________________________
