@@ -551,3 +551,229 @@
 // console.log(examin([5, 12, -1, -1.5, -9.1, 52, -40, 23, 0, -4, -5.6]));
 
 //___________________________________________________________________________________
+
+// function examin(arr) {
+//     const newArr = arr.filter((element) => element < 0);
+//     console.log(`Новый масив ${newArr} старый массив ${arr}`);
+// }
+    
+// examin([5, 12, -1, -1.5, -9.1, 52, -40, 23, 0, -4, -5.6])
+
+//___________________________________________________________________________________
+
+// const arr = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+
+// const sumArr = arr.reduce((sum, elem) => sum + elem);
+
+// console.log(arr);
+// console.log(sumArr);
+
+//___________________________________________________________________________________
+
+// const add5 = (number) => {
+//     return number + 5;
+//   }
+  
+  
+//   let value = 10;
+//   value = add5(value);
+//   console.log(value);
+
+//___________________________________________________________________________________
+
+// let amount = 5000;
+
+// let yearDeposit = (rate, num) => {
+//   return rate += rate / 100 * num;
+// }
+
+// amount = yearDeposit(amount, 80);
+// console.log(amount);
+
+//___________________________________________________________________________________
+
+// //Вызов функции в функции
+
+// function outer() {
+
+//     return function() {
+//       console.log('Inner function here');
+//     }
+//   }
+  
+//   const inner = outer();
+  
+//   inner();
+  
+//___________________________________________________________________________________
+
+// const name = 58444;
+
+// const strName = String(name).split('').reverse().join();
+
+// console.log(strName);
+
+// const arr = ['Petya', 'Fedor', 'Vitaly'];
+
+// const [...newArr] = arr;
+
+// console.log(arr);
+// console.log(newArr);
+
+// const arr = ['Petya', 'Fedor', 'Vitaly', 'Katya', 'Alena'];
+
+// const [, , name, ...newArr] = arr;
+
+// console.log(newArr);
+// console.log(name);
+
+// let matrix = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+//   ];
+
+  
+// for (let i = 0; i < matrix.length; i++) {
+//     for (let j = 0; j < matrix[i].length; j++) {
+//         if (matrix[i][j] === 1 || matrix[i][j] === 4 || matrix[i][j] === 7) {
+//             console.log(matrix[i][j]);
+//         }
+//     }
+// }
+
+
+// for (let i = 0; i < matrix.length; i++) {
+//     for (let j = 2; j < matrix[i].length; j++) {
+//         console.log(matrix[i][0]);
+//         // console.log(matrix[j]);
+//     }
+// }
+
+// const arr = [1, 2, 3, 4, 5];
+
+// function callback(item, index, array) {
+//     // console.log(`Элемент ${item} с инексом ${index}`);
+//     console.log(array);
+// }
+
+// arr.forEach(callback);
+
+// const arr = [1, 2, 3, 4, 5];
+
+// function callback(arr) {
+//     arr.forEach((item, index) => {
+//         console.log(`${item} - это значение элемента с индексом ${index}`);
+//     })
+  
+// }
+
+// callback(arr)
+
+// const arr = [1, 2, 3, 4, 5];
+
+// function callback(item, index) {
+//   console.log(`${item} - это значение элемента с индексом ${index}`);
+// }
+
+// arr.forEach(callback);
+
+// const arr = [1, 2, 3, 4, 5];
+// const newArr = arr.map((item, index) => {
+//   return item + 5;
+// });
+
+// console.log(newArr);
+
+// function updateArr(arr) {
+//     const newArr = arr.map(item => {
+//         if (item < 0) {
+//             return item * -1;
+//         } else if (item > 0) {
+//             return item * 2;
+//         }
+//         return item;
+//     })
+//     console.log(newArr);
+// }
+
+// updateArr([12, -23, -40, 3]);
+
+// function findThreeLettersWord(arr) {
+//     arr.find((item, index) => {
+//         if (item.length === 3) {
+//             console.log(`${item} ${index}`);
+//         }
+//     })
+// }
+
+// findThreeLettersWord(['Green','Red', 'Blue']);
+
+// const arr = [5, -10, 15, -20];
+
+// function func(item) {
+//     return item > 0;
+// }
+
+// console.log(arr.filter(func));
+
+// function sortStrings(arr) {
+//     const newArr = arr.map(item => {
+//         return item;
+//     });
+//     const arrSort = newArr.sort((a, b) => {
+//         return a - b;
+//     })
+//     console.log(arrSort);
+// }
+
+// sortStrings(['Hofstadter', 'Cooper', 'Wolowitz', 'Koothrappali']);
+// sortStrings([5,1,9,3,4,7]);
+
+//___________________________________________________________________________________
+
+// const str = [1,5,4,5,4,8];
+
+// for (let item of str) {
+//     // console.log(`Элемент ${str[i]} с индексом ${i}`);
+//     console.log(`Элемент ${item} индекс ${str.indexOf(item)}`);
+// }
+
+//___________________________________________________________________________________
+
+// const str = new String('Chidume');
+
+// console.log(typeof str[Symbol.iterator]);
+
+// console.log(Number.isInteger(2.2));
+
+// let str = 'Petya';
+// let reverse = '';
+
+// for (let i = str.length- 1; i >= 0; i--) {
+//     reverse += str[i];
+// }
+
+// console.log(reverse.toLowerCase());
+
+// const str = [213];
+
+// const arr = str.map(String);
+
+// console.log(str)
+
+// console.log(arr)
+
+//___________________________________________________________________________________
+
+//Spread оператор
+
+// const namesGroupOne = ['Aleksey', 'Andrey', 'Petya', 'Vitaly'];
+// const namesGroupTwo = ['Olga', 'Alena', 'Yulia', 'Dasha'];
+
+// console.log([...namesGroupOne, 'Habl', ...namesGroupTwo]);
+
+//Раньше использовался метод concat()
+
+
+
