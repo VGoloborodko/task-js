@@ -775,5 +775,413 @@
 
 //Раньше использовался метод concat()
 
+// const namesGroupOne = ['Aleksey', 'Andrey', 'Petya', 'Vitaly'];
+// const namesGroupTwo = ['Olga', 'Alena', 'Yulia', 'Dasha'];
+// const allNames = namesGroupOne.concat(namesGroupTwo);
+// console.log(allNames);
+
+//С объектами
+
+// const citiesSecurityRussia = {
+//     Moscow: true,
+//     Ryazan: false,
+//     Sochi: true
+// }
+
+// const citiesSecurityEuropa = {
+//     Paris: true,
+//     Minsk: false,
+//     Rome: true
+// }
+
+// const citiesSecurity = {...citiesSecurityRussia, ...citiesSecurityEuropa}
+
+// console.log(citiesSecurity);
+
+//
+
+// const arr = [45,74,22,64,91];
+
+// function sum(a, b, ...rest) {
+//     // console.log(rest)
+//     return a + b + rest.reduce((one, two) => one + two, 0)
+// }
+
+// console.log(sum(...arr))
+
+// console.log(...arr);
+// console.log(Math.max(...arr));
+
+//___________________________________________________________________________________
+
+//Фибоначи
+
+// let val = prompt('Число для фибоначи');
+
+// function fibonacci(num) {
+//     let a = 0,
+//         b = 1;
+//         sum = 2;
+
+//     for (let i = 2; i <= num; i++) {
+
+//         let c = a + b;
+
+//         a = b;
+//         b = c;
+//         sum += b;
+//         console.log(sum);
+//     }
+//     // return sum;
+// }
+    
+// console.log(fibonacci(10));
+
+//___________________________________________________________________________________
+
+//Метод map
+
+// const arr = [1,5,3,7,8,4,0];
+// console.log(arr);
+
+// const newArr = arr.map(item => item * 2);
+// console.log(newArr);
 
 
+// const map = Array.prototype.map;
+// console.log(map);
+
+// const charCodes = map.call('Hello World', (elem) => elem.charCodeAt(0));
+// // const charCodes = map.call('Hello World', (x) => x.charCodeAt(0));
+// console.log(charCodes);
+
+
+// const string = '12345';
+// console.log(string);
+
+// // const reversed = string.split('').reverse().join('');
+// const reversed = Array.prototype.map.call(string, elem => elem).reverse().join('');
+// console.log(reversed);
+
+
+// // const array = ['1','2','3'].map(parseInt); // [ 1, NaN, NaN ]
+// const array = ['1','2','3'].map(Number); // [ 1, 2, 3 ]
+// console.log(array);
+
+
+// Метод Number.isInteger()
+// console.log(Number.isInteger(10 / 5));
+
+//___________________________________________________________________________________
+
+//Сортировка
+
+// const arr = ['P','E','T','Y','A'];
+// // const arr = [5,7,3,2,8,9,0,6,1,4];
+
+// function compare(array) {
+//     array.sort().reverse();
+// }
+
+// compare(arr)
+// console.log(arr);
+
+
+// var stringArray = ['Голубая', 'Горбатая', 'Белуга', 'AAA'];
+
+// function compareNumbers(a, b) {
+//     return a - b;
+//   }
+
+// compareNumbers(stringArray);
+// console.log(stringArray.join(' '));
+// // console.log(stringArray);
+
+
+//Reduce
+
+// const nums = [5,7,3,2,8,9,0,6,1,4];
+// let res;
+
+// const result = nums.reduce( 
+//     (acc, item) => {  // Результат прошлых операций и следующий элемент
+//         res = acc + item;
+//         return res;
+// }, 0); // Начальное значение
+
+// console.log(nums, res);
+
+
+// //Сумма квадратов массива
+
+// function squareSum(arr) {
+//     const result = arr.reduce((acc, item) => {return item * item + acc}, 0);
+//     return result;
+// }
+
+// console.log(squareSum([2, 3, 4]));
+
+//___________________________________________________________________________________
+
+//Объекты
+
+// const player = {
+//     'first name': 'Eric',
+//     'last name': 'Cartman',
+//     isPremium: true,
+//     level: 14,
+//     greet: function(num) {
+//         // this.level = num;
+//     },
+// }
+
+// player.status = 'active';
+
+// player.greet(15);
+// console.log(player);
+
+// for (const key in player) {
+//     console.log(`Ключ ${key} значение ${player[key]}`); // Показать все значения свойств
+// }
+
+// console.log(Object.values(player)); // Вывести значения объекта
+
+// console.log(player);
+// console.log('status' in player); //Проверяет есть ли данное свойство у объекта
+
+//___________________________________________________________________________________
+
+// Напишите однострочное решение, которое вычисляет сумму квадратных корней 
+//для всех чётных чисел целочисленного массива.
+
+// const array = [4,16,36,9];
+// let sum = 0;
+
+// function func(arr) {
+//     arr.forEach(item => item % 2 === 0 ? sum += Math.sqrt(item) : item);
+//     // console.log(sum);
+// }
+
+// func(array)
+
+//___________________________________________________________________________________
+
+//Обычное создание объекта
+// const player = {
+//     'first name': 'Eric',
+//     'last name': 'Cartman',
+//     isPremium: true,
+//     level: 14,
+//     greet: function(num) {
+//         // this.level = num;
+//     },
+// }
+
+//Тоже самое, что и выше
+// const player = new Object({
+//     'first name': 'Eric',
+//     'last name': 'Cartman',
+//     isPremium: true,
+//     level: 14,
+//     greet: function(num) {
+//         // this.level = num;
+//     },
+// })
+
+// const lena = Object.create(player);
+
+// player.status = true; //Добавление свойства
+// player.status = false; //Изменение свойства
+// delete player.status; //Удаление свойства
+// console.log(player);
+
+// console.log('level' in player); // Проверка, есть ли данное свойство в объекте
+
+//___________________________________________________________________________________
+
+// //Создайте функцию addTax(). Передайте в неё данный массив price с ценами без НДС. 
+// //С помощью функции addTax() создайте массив с ценами с НДС. НДС cоставляет 20%.
+
+// const price = [1, 65.5, 3464.65, 59, 13, 45.55, 3456, 245, 1000];
+// // console.log(price);
+
+// function addTask(arr) {
+//     const newPrice = arr.map(element => {return element + element / 100 * 20});
+//     console.log(newPrice);
+// }
+
+// addTask(price)
+
+//___________________________________________________________________________________
+
+//ПЕРЕБОР МАССИВА
+
+// //Напишите функцию countEvensAndOdds(), которая получает в качестве параметра массив чисел 
+// //и возвращает сообщение с информацией о том, сколько в массиве чётных и нечётных чисел.
+
+// const numbers = [22,30,74,13,9,29,33,46,4];
+
+// let even = null; //четные
+// let odd = null; //нечетные
+
+// function countNumbers(arr) {
+//     arr.forEach(element => {
+//         if (element % 2 === 0) even++
+//         else odd++
+//     })
+//     console.log(`В массиве ${even} четных числа и ${odd} нечетных`);
+// }
+
+// countNumbers(numbers)
+
+//___________________________________________________________________________________
+
+//СОРТИРОВКА
+
+//Напишите функцию sortByBirth, которая получает в качестве параметра массив строк 
+//в формате 'имя, год рождения' и возвращает массив строк, отсортированных по году рождения.
+
+// function sortByBirth(arr) {
+//     sortArr = arr.sort((a, b) => {
+//         return a.split(',')[1] - b.split(',')[1];
+//     })
+//     return sortArr;
+// }
+
+// console.log(sortByBirth([
+//     'Nicola Tesla, 1856',
+//     'Alan Turing, 1912',
+//     'Ada Lovelace, 1815'
+//   ]));
+
+
+//Другой код
+
+// const arrayProduct = ['Светильник, красный, 590', 'Лампа, бирюзовая, 260', 'Ночник, зоопарк, 150'];
+
+// function sortProductPrice(a, b) {
+//     return a.split(',')[2] - b.split(',')[2];
+// }
+
+// console.log(arrayProduct.sort(sortProductPrice));
+
+//___________________________________________________________________________________
+
+// console.log(parseInt(3.14));
+// console.log(parseFloat('3.14'));
+// console.log(parseFloat('314e-2'));
+// console.log(parseInt('0.5514E+2'));
+// console.log(parseFloat('3.14какие-нибудь не цифровые знаки'));
+
+//___________________________________________________________________________________
+
+//КЛАССЫ
+
+// //Повторение
+
+// class User {
+//     constructor(name, department) {
+//         this.name = name;
+//         this.department = department;
+//         this.isAvailable = false;
+//     }
+//     toggleAvailable(isAv) {
+//         this.isAvailable = isAv;
+//     }
+// }
+
+// const user1 = new User('Luke Skywalker', 'Russia');
+// const user2 = new User('Han Solo', 'USA');
+
+// user1.toggleAvailable(true)
+
+// console.log(user1);
+// console.log(user2);
+
+
+// //Упражнение
+
+// class Person {
+//     constructor(surname, name, age, gender) {
+//         this.surname = surname;
+//         this.name = name;
+//         this.age = age;
+//         this.gender = gender;
+//     }
+//     celebrateBirthday(plus) {
+//         this.age = this.age + plus;
+//     }
+// }
+
+// const user_one = new Person('Миронов', 'Николай', 24, 'M');
+// // const user_two = new Person('Гладкая', 'Соня', 25, 'F');
+// // const user_tree = new Person('Луконин', 'Никита', 23, 'M');
+
+// user_one.celebrateBirthday(1)
+
+// console.log(user_one);
+// // console.log(user_two);
+// // console.log(user_tree);
+
+
+// //Наследование
+
+// class Vehicle {
+//     constructor(maxSpeed, color) {
+//       this.maxSpeed = maxSpeed;
+//       this.color = color;
+//     }
+// }
+  
+// class Car extends Vehicle {
+//     constructor(maxSpeed, color, mileage) { //Если нужно впистаь дополнительные свойства, писать здесь
+//       super(maxSpeed, color); //То что надо унаследовать
+//       this.mileage = mileage;
+//     }
+// }
+
+// const one = new Vehicle(200, 'black');
+// const two = new Car(250, 'white', false);
+
+// console.log(one);
+// console.log(two);
+
+
+// //УПРАЖНЕНИЕ
+
+// class Person {
+//     constructor(surname, name, age, gender) {
+//         this.surname = surname;
+//         this.name = name;
+//         this.age = age;
+//         this.gender = gender;
+//     }
+//     celebrateBirthday(plus) {
+//         this.age = this.age + plus;
+//     }
+// }
+
+// const user_one = new Person('Миронов', 'Николай', 24, 'M');
+// user_one.celebrateBirthday(1)
+// console.log(user_one);
+
+// class Admin extends Person {
+//     constructor(surname, name, age, gender, role, id) {
+//         super(surname, name, age, gender);
+//         this.role = role;
+//         this.id = id;
+//     }
+// }
+
+// const user_admin = new Admin('Романов', 'Николай', 24, 'M', 'Cesar', 01);
+// console.log(user_admin);
+
+// class Player extends Person {
+//     constructor(surname, name, age, gender, level) {
+//         super(surname, name, age, gender);
+//         this.level = level;
+//     }
+// }
+
+// const user_player = new Player('Дуров', 'Андрей', 17, 'M', 22);
+// console.log(user_player);
