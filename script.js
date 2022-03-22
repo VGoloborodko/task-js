@@ -1185,3 +1185,213 @@
 
 // const user_player = new Player('Дуров', 'Андрей', 17, 'M', 22);
 // console.log(user_player);
+
+//___________________________________________________________________________________
+
+//DOM 
+
+// // ЗАДАНИЕ
+
+// const elem = document.querySelectorAll('.primary');
+// elem.forEach(element => {
+//     element.style.color = 'red';
+//     console.log(element.innerHTML);
+// })
+
+// const allLi = document.querySelector('ul');
+
+// console.log(allLi.parentElement);
+// console.log(allLi.previousElementSibling.innerHTML = 'GeForce 20 Series');
+// console.log(allLi.children);
+// for (let i = 0; i < allLi.children.length; i++) {
+//     console.log(allLi.children[i].innerHTML);
+// }
+// console.log(allLi.firstElementChild.innerHTML);
+
+
+// //Добавление и удаление класса
+
+// const elementClasses = element.classList.add('class');
+// const elementClasses = element.classList.remove('class');
+
+
+// // // // ЗАДАНИЕ - НЕРЕШЕННОЕ
+
+// const listElements = document.querySelectorAll('li');
+// const parentElementTag = document.querySelector('ul');
+// const array = [...listElements];
+
+// // console.log(array);
+
+// array.forEach((element, index) => {
+//     element.classList.add('item');
+    
+//     if (element.classList.contains('primary')) {
+        
+//         element.remove();
+//     }
+//     else element.classList.add('secondary');
+
+// })
+
+// console.log(array);
+// console.log(listElements);
+
+// const addElement = document.createElement('li');
+// addElement.classList.add('item');
+// addElement.innerHTML = 'TITAN RTX';
+// parentElementTag.insertBefore(addElement, listElements[0]);
+
+//___________________________________________________________________________________
+
+// //Перевернуть строку - реверсия
+// const name = 'Petya';
+// let reverse = '';
+// for (let i = name.length - 1; i >= 0; i--) {
+//     reverse += name[i];
+// }
+// console.log(reverse);
+
+// const map1 = new Map();
+
+// map1.set('0', 'foo');
+// map1.set(1, 'bar');
+
+// const iterator1 = map1.keys();
+
+// console.log(iterator1.next().value);
+// // expected output: "0"
+
+// console.log(iterator1.next().value);
+// // expected output: 1
+
+// console.log(map1);
+
+// const data = '{"id":371,"type":"general","joke":"Why does a chicken coop only have two doors? Because if it had four doors it would be a chicken sedan."}';
+// const newData = JSON.parse(data);
+// newData.id = 157;
+// const changeData = JSON.stringify(newData);
+// console.log(changeData);
+
+// const div = document.querySelector('.jokes');
+
+// const btn = document.querySelector('.btn');
+// btn.addEventListener('click', event => {
+//     console.log(event.target.innerHTML);
+//     fetch('https://api.chucknorris.io/jokes/random')
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log(data);
+//             const element = document.createElement('p');
+//             element.innerHTML = data.value;
+//             div.append(element);
+//         })
+//         .catch(error => {
+//             console.log(error.message);
+//         })
+
+// });
+
+
+//ПОИСК ТРАНЗАККЦИИ на сервере
+// const div = document.querySelector('.jokes');
+
+// const btn = document.querySelector('.btn');
+// btn.addEventListener('click', event => {
+//     console.log(event.target.innerHTML);
+//     fetch('https://acb-api.algoritmika.org/api/transaction?to=obama')
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log(data);
+//             for (let i = 0; i < data.length; i++) {
+//                 // console.log(`${data[i].from} перевел ${data[i].to} платеж ${data[i].amount}`);
+//                 const translations = document.createElement('p');
+//                 translations.innerHTML = `${data[i].from} перевел ${data[i].to} платеж ${data[i].amount}`;
+//                 div.append(translations);
+//             }
+            
+//         })
+//         .catch(error => {
+//             console.log(error.message);
+//         })
+
+// });
+
+//___________________________________________________________________________________
+
+// //СОЗДАНИЕ ТРАНЗАКЦИИ на сервер
+// const div = document.querySelector('.jokes');
+
+// const info = {
+//     from: 'Fedya',
+//     to: 'Mischa',
+//     amount: 3000
+// }
+
+// const btn = document.querySelector('.btn');
+// btn.addEventListener('click', event => {
+//     console.log(event.target.innerHTML);
+//     // fetch('https://acb-api.algoritmika.org/api/transaction/362', {
+//     //     method: 'DELETE'
+//     // })
+
+//     //PUT запрос
+//     // fetch('https://acb-api.algoritmika.org/api/transaction/370', {
+//     //     method: 'PUT',
+//     //     headers: {
+//     //         'Content-type': 'application/json'
+//     //     },
+//     //     body: JSON.stringify(info)
+//     // })
+
+//     //POST запрос
+//     // fetch('https://acb-api.algoritmika.org/api/transaction', {
+//     //     method: 'POST',
+//     //     headers: {
+//     //         'Content-type': 'application/json'
+//     //     },
+//     //     body: JSON.stringify(info)
+//     // })
+
+//     fetch('https://acb-api.algoritmika.org/api/transaction')
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log(data);
+//             for (let i = 0; i < data.length; i++) {
+//                 // console.log(`${data[i].from} перевел ${data[i].to} платеж ${data[i].amount}`);
+//                 const translations = document.createElement('p');
+//                 translations.innerHTML = `${data[i].from} перевел ${data[i].to} платеж ${data[i].amount}`;
+//                 div.append(translations);
+//             }
+            
+//         })
+//         .catch(error => {
+//             console.log(error.message);
+//         })
+
+// });
+
+//___________________________________________________________________________________
+
+//АСИНХРОННОЕ ПРОГРАММИРОВАНИЕ
+
+// //МЕТОД setTimeout - вызывается один раз
+// console.log('Bill Gates');
+// setTimeout(() => {
+//     console.log('Steve Jobs');
+// }, 1000)
+// console.log('Elon Mask');
+
+// //МЕТОД setInterval - вызывается много раз
+// let time = 0;
+
+// const id = setInterval(() => {
+//     time += 1;
+//     console.log(`Прошло ${time} сек.`);
+//     if (time === 10) {
+//         clearInterval(id);
+//     }
+// }, 1000);
+
+//___________________________________________________________________________________
+

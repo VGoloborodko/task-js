@@ -1,0 +1,22 @@
+.item {
+    background: rgb(189, 182, 185);
+    color: rgb(194, 226, 50);
+}
+
+.secondary {
+    color: red;
+}
+
+p {
+    color: red;
+}
+
+p::before {
+    content: '«';
+    color: green;
+}
+
+p::after {
+    content: '»';
+    color: green;
+}
