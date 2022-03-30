@@ -1395,3 +1395,94 @@
 
 //___________________________________________________________________________________
 
+
+// const arr = [];
+
+// function adata() {
+
+//     fetch('https://api.chucknorris.io/jokes/random')
+//         .then(response => response.json())
+//         .then(data => {
+//             // console.log(data);
+//             arr.pop()
+//             arr.push(data.value)
+//             // console.log(arr);
+//         })
+//         .catch(error => {
+//             console.log(`Произошла ошибка: ${error.message}`);
+//         });
+//         p.innerHTML = arr[0];
+//         // console.log(arr);
+// }
+
+
+// let body = document.querySelector("body")
+// let button = document.createElement("button")
+// button.style.width = "100px"
+// button.style.height = "100px"
+// body.append(button)
+// button.addEventListener("click", adata)
+
+// let p = document.createElement('p')
+// body.append(p)
+
+//___________________________________________________________________________________
+
+//Написать функцию, которая принимает массив сотрудников, каждый сотрудник имеет имя и возраст 
+//([{name: 'Иван', age: 23},...]) и возвращает массив, где каждый элемент представляет из себя 
+//строку "Имя: Иван, возвраст: 23".
+
+
+// function process(staff) {
+//     const arr = [];
+
+//     for (let i = 0; i < staff.length; i++) {
+//         arr.push(`Имя: ${staff[i].name}, возрвст: ${staff[i].age}`);
+//     }
+
+//     return arr;
+// }
+
+// console.log(process([{name: 'Иван', age: 19}, {name: 'Виталий', age: 24}, {name: 'Ольга', age: 24}, {name: 'Андрей', age: 30}]));
+
+//___________________________________________________________________________________
+
+//Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.
+
+// let menu = {
+//     width: 200,
+//     height: 300,
+//     title: "My menu"
+// }
+
+// function multiplyNumeric() {
+//     menu.width = menu.width * 2;
+//     menu.height = menu.height * 2;
+// }
+
+// multiplyNumeric(menu);
+// console.log(menu);
+
+//___________________________________________________________________________________
+
+// //Задание setInterval
+
+// const paragraph = document.querySelector('.par');
+// const buttonStart = document.querySelector('.start');
+// buttonStart.addEventListener('click', change);
+// const buttonStop = document.querySelector('.stop');
+
+// let time = 0;
+
+// function change() {
+//     const id = setInterval(() => {
+//         time += 1;
+//         paragraph.innerHTML = time;
+//         buttonStop.addEventListener('click', () => {
+//             clearInterval(id);
+//         })
+//     }, 1000)
+// }
+
+//___________________________________________________________________________________
+
