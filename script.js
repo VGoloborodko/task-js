@@ -1486,3 +1486,107 @@
 
 //___________________________________________________________________________________
 
+// //Promise asyns и await
+
+// fetch('https://rickandmortyapi.com/api/character')
+//     .then(res => res.json())
+//     .then(data => console.log(data))
+
+
+// const getCharacterData = async (id) => {
+//     const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
+//     const data = await response.json();
+
+//     return data;
+// }
+
+// console.log(getCharacterData(1));
+
+//___________________________________________________________________________________
+
+// loadList = async () => {
+//     const response = await fetch(
+//         "https://acb-api.algoritmika.org/api/transaction"
+//       );
+     
+//       const body = await response.json();
+//       return body;         
+// }
+
+// console.log(loadList());
+
+//___________________________________________________________________________________
+
+// //Выводим две кнопки "заблокировать" и "разблокировать" и инпут. Одна из них блокирует 
+// //инпут с помощью атрибута disabled, а другая разблокирует.
+
+// const input = document.querySelector('input');
+// const btnBlock = document.querySelector('.btn_block');
+// btnBlock.addEventListener('click', () => {
+//     input.disabled = true;
+// })
+// const btnOnlock = document.querySelector('.btn_onlock');
+// btnOnlock.addEventListener('click', () => {
+//     input.disabled = false;
+// })
+
+//___________________________________________________________________________________
+
+// //Выводим красный квадрат, при наведении на него он становиться зеленым, а когда уводим курсор от него, обратно красным.
+
+// const div = document.querySelector('div');
+// div.addEventListener('mouseover', (event) => {
+//     event.target.style.background = 'green';
+//     div.addEventListener('mouseout', (event) => {
+//         event.target.style.background = 'red';
+//     })
+// })
+
+//___________________________________________________________________________________
+
+// //Метод sort()
+
+// const arr = ['яблоко', 'вишня', 'апельсин'];
+// arr.sort()
+// console.log(arr);
+
+// const arr = ['33', '4', '1111', '222'];
+// arr.sort((a,b) => {
+//     return a - b
+// })
+// console.log(arr);
+
+// const arr = ['жук', 'Лиса', 'кот'];
+// arr.sort((a,b) => {
+//     let one = a.toLowerCase();
+//     let two = b.toLowerCase();
+//     if (one > two) return -1
+//     if (one < two) return 1
+//     return 0
+// })
+// console.log(arr);
+
+
+// //Метод slice()
+
+// const arr = [1,2,3,4,5]
+// const newArr = arr.slice(0)
+// console.log(newArr);
+
+//стр. 133 переписать методы массивов
+
+//___________________________________________________________________________________
+
+// // const arr = [55,12,444,30,22,74,3333];
+// // const arr = ['Petya', 'Ambrom', 'Betsy', 'Yanki', 'Vitaly'];
+// const arr = ['petya', 'ambrom', 'betsy', 'yanki', 'Vitaly'];
+
+// arr.sort((s,t) => {
+//     let a = s.toLowerCase();
+//     let b = t.toLowerCase();
+//     if(a < b) return -1;
+//     if(a > b) return 1;
+//     return 0;
+// })
+
+// console.log(arr);
